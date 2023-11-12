@@ -6,24 +6,29 @@
     </head>
     <body>
         <h1>Altas</h1>
+        <--<!-- Se usa el form action para conectar un HTML con un JSP, o un JSP con otro JSP -->
         <form action="altas.jsp" method="post" name="altas">
             Contraseña: <input type="text" name="contrasenia">
             <br><br>
             Nombre: <input type="text" name="nombre">
-            <br><br><!-- comment -->
-            <select name="estado">
+            <br><br>
+            <select name="estado"><!-- Combo -->
                 <option value="Seleccionar" disabled selected>Selecciona opcion</option>
-                <option value="aguascalientes">Aguascalientes</option>
+                <option value="Aguascalientes">Aguascalientes</option>
                 <option value="Cuidad de Mexico">Cuidad de Mexico</option>
                 <option value="Estado de Mexico">Estado de Mexico</option>
                 <option value="Guadalajara" >Guadalajara</option>
-                
             </select>
             <br><br>
-            Sexo. <br><!-- comment -->
-            <input type="radio" name="sexo" value="Hombre">masculino<br><!-- comment -->
-            <input type="radio" name="sexo" value="Mujer">Mujer<br><!-- comment -->
-            <input type="submit" name="alta" value="Alta"><br><!-- comment -->                             
+            Sexo.
+            <br>
+            <input type="radio" name="sexo" value="Hombre" required>Masculino<br><!-- Requierd para no dejar el campo vacío -->
+            <input type="radio" id="sexo" name="sexo" value="Mujer">Femenino<br><!--Para los intputs usar la nemotecnia timbu
+            type
+            id
+            name
+            value-->
+            <input type="submit" name="alta" value="Alta"><br><!-- El submit, al darle click, ejecuta el JSP que se llama con el form action   -->                             
         </form>
         <div></div>
     </body>
